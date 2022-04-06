@@ -11,17 +11,11 @@ function acumular(a) {
         resultado = resultado + a;
         resultado = parseFloat(resultado);
         document.getElementById("resul").value = resultado;
-        console.log(resultado);
-        console.log("convertido para Float");
-        console.log(typeof resultado);
         decimal = 1;
     }
     else {
         resultado = resultado + a;
         document.getElementById("resul").value = resultado;
-        console.log(resultado);
-        console.log("variavel decimal:", decimal);
-        console.log(typeof resultado);
     }
 }
 //--------INSERIR PONTO DECIMAL--------
@@ -32,7 +26,6 @@ function acumularespecial(x) {
     else{
         resultado = resultado + x;
         document.getElementById("resul").value = resultado;
-        console.log(resultado);
         decimal = ".";
         return resultado;
     }
@@ -43,13 +36,11 @@ function opnum1(){
     num1 = parseFloat(num1);
     decimal = "";
     resultado ="";
-    console.log("executou opnum1");
 }
 function opnum2(){
     num2 = resultado;
     num2 = parseFloat(num2);
     decimal = "";
-    console.log("executou opnum2");
 }
 function clear(){
     resultado = "";
@@ -66,28 +57,24 @@ function operador(o) {
             if (num1 == 0.0){
                 sinal = "*";
                 opnum1();
-                console.log("IF *");
             }
         break;
         case "+":
             if (num1 == 0.0){
                 sinal = "+";
                 opnum1();
-                console.log("IF +");
                 }
         break;
         case "-":
             if (num1 == 0.0){
                 sinal = "-";
                 opnum1();
-                console.log("IF -");
                 }
         break;
         case "/":
             if (num1 == 0.0){
                 sinal = "/";
                 opnum1();
-                console.log("IF /");
                 }
         break;
         //--------OPERAÇÕES ESPECIAIS------
@@ -147,7 +134,6 @@ function operador(o) {
             if (num1 == 0.0){
                 sinal = "^";
                 opnum1();
-                console.log("IF ^");
                 }
         break;
     }
@@ -157,27 +143,22 @@ function equal(){
     switch (sinal) {
         case "+":
             opnum2();
-            console.log("case +");
             resultado = num1 + num2;
         break;
         case "*":
             opnum2();
-            console.log("case *");
             resultado = num1 * num2;
         break;
         case "-":
             opnum2();
-            console.log("case -");
             resultado = num1 - num2;
         break;
         case "/":
             opnum2();
-            console.log("case /");
             resultado = num1 / num2;
         break;
         case "^":
             opnum2();
-            console.log("case ^");
             resultado = Math.pow(num1,num2);
         break;
     }
