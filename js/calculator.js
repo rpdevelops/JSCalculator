@@ -98,7 +98,7 @@ function operador(o) {
         case "e": //ELEVADO A 2
             resultado = document.getElementById("resul").value;
             resultado= parseFloat(resultado);
-            resultado = resultado*resultado;
+            resultado = resultado**2;
             document.getElementById("resul").value = resultado;
         break;
         case "s": //RAIZ QUADRADA
