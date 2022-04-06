@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JSCalculator</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<!--[if IE]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- Bootstrap -->
+    	<link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<body class="bodyformat">
+		<header class="headerformat">
+			<a href="index.html"><img src="img/JSlogo.png" class="logo"></a>
+			<span class="slogan">JavaScript Calculator</span>
+		</header>
+		<main>
+			<section class="calculadora">
+				<article class = "calc">
+					<form>
+						<!--Display-->
+						<input type="text" id="resul" value ="0" class="resultado" readonly/>
+						<br>
+						<!--Teclas-->
+						<input type="button" onclick="operador('c')" value="Clear" class="clearbutton">
+						<input type="button" onclick="operador('e')"value="X²"class="botoes">
+						<input type="button" onclick="operador('s')"value="²√"class="botoes">
+						<br>
+						<input type="button" onclick="acumular('7')" value="7" class="botoes">
+						<input type="button" onclick="acumular('8')" value="8"class="botoes">
+						<input type="button" onclick="acumular('9')" value="9"class="botoes">
+						<input type="button" onclick="operador('*')"value="X"class="botoes">
+						<br>
+						<input type="button" onclick="acumular('4')" value="4"class="botoes">
+						<input type="button" onclick="acumular('5')" value="5"class="botoes">
+						<input type="button" onclick="acumular('6')" value="6"class="botoes">
+						<input type="button" onclick="operador('-')" value="-"class="botoes">
+						<br>
+						<input type="button" onclick="acumular('1')" value="1"class="botoes">
+						<input type="button" onclick="acumular('2')" value="2"class="botoes">
+						<input type="button" onclick="acumular('3')" value="3"class="botoes">
+						<input type="button" onclick="operador('+')" value="+"class="botoes">
+						<br>
+						<input type="button" onclick="acumular('0')" value="0"class="botoes">
+						<input type="button" onclick="acumularespecial('.')" value="."class="botoes">
+						<input type="button" onclick="equal()" value="=" class="botoes">
+						<input type="button" onclick="operador('/')" value="/"class="botoes">
+					</form>	
+				</article>
+				<aside class="scientific">
+					<input type="button" onclick="operador('^')" value="^" class="botoesscientific">
+					<input type="button" onclick="operador('x')" value="x³" class="botoesscientific">
+					<input type="button" onclick="operador('k')" value="sin" class="botoesscientific">
+					<input type="button" onclick="operador('y')" value="cos" class="botoesscientific">
+					<input type="button" onclick="operador('z')" value="tan" class="botoesscientific">
+					<input type="button" onclick="operador('w')" value="Pi"  class="botoesscientific">
+					<input type="button" onclick="" value=">" class="break pushbutton">
+				</aside>
+			</section>
+		</main>
+		<footer class = "footerformat">
+			<p>Portfolio Project - RPDeployment® - Robson Paradella Rocha<br>2022</p>
+		</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>	
+	<script language="javascript" src="js/calculator.js"></script>			
+	</body>
+</html>
